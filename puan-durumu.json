@@ -1,22 +1,23 @@
 {
-  "takim": "Şanlıurfaspor",
-  "lig": "2. Lig",
-  "puan_durumu": {
-    "sira": 3,
-    "oynancak_mac": 12,
-    "galibiyet": 7,
-    "beraberlik": 3,
-    "maglubiyet": 2,
-    "avans": "+10",
-    "puan": 24
-  },
-  "son_maclar": [
-    {
-      "hafta": "12. Hafta",
-      "rakip": "Karaköprü Belediyespor",
-      "skor": "2 - 1",
-      "durum": "MS",
-      "ev_sahibi_mi": true
-    }
-  ]
+    "takim": "Şanlıurfaspor",
+    "lig": "TFF 2. Lig",
+    "guncelleme_tarihi": "01.11.2026 23:29",
+    "puan_durumu": {
+        "sira": 3,
+        "oynanan_mac": 14,
+        "galibiyet": 8,
+        "beraberlik": 3,
+        "maglubiyet": 3,
+        "avans": "+12",
+        "puan": 27
+    },
+    "son_maclar": [
+        {
+            "hafta": "Güncel Hafta",
+            "rakip": "Şanlıurfaspor",
+            "skor": "Canlı Skor",
+            "durum": "Aktif",
+            "ev_sahibi_mi": true
+        }
+    ]
 }
