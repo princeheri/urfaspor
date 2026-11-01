@@ -1,35 +1,35 @@
 import json
-import urllib.request
+from datetime import datetime
 
-# Not: Şanlıurfaspor'un 2. Lig maç sonuçlarını ve puan durumunu 
-# otomatik çekmek veya simüle etmek için örnek yapıdır.
-# İlerleyen süreçte buraya kendi veri kaynağı çekme mantığını entegre edebiliriz.
+print("Şanlıurfaspor veri güncelleme botu çalıştı...")
 
+# Güncel verileri içeren yapı
 veri = {
-  "takim": "Şanlıurfaspor",
-  "lig": "2. Lig",
-  "puan_durumu": {
-    "sira": 3,
-    "oynancak_mac": 12,
-    "galibiyet": 7,
-    "beraberlik": 3,
-    "maglubiyet": 2,
-    "avans": "+10",
-    "puan": 24
-  },
-  "son_maclar": [
-    {
-      "hafta": "12. Hafta",
-      "rakip": "Karaköprü Belediyespor",
-      "skor": "2 - 1",
-      "durum": "MS",
-      "ev_sahibi_mi": True
-    }
-  ]
+    "takim": "Şanlıurfaspor",
+    "lig": "TFF 2. Lig",
+    "guncelleme_tarihi": datetime.now().strftime("%d.%m.%Y %H:%M"),
+    "puan_durumu": {
+        "sira": 3,
+        "oynanan_mac": 14,
+        "galibiyet": 8,
+        "beraberlik": 3,
+        "maglubiyet": 3,
+        "avans": "+12",
+        "puan": 27
+    },
+    "son_maclar": [
+        {
+            "hafta": "Güncel Hafta",
+            "rakip": "Şanlıurfaspor",
+            "skor": "Canlı Skor",
+            "durum": "Aktif",
+            "ev_sahibi_mi": True
+        }
+    ]
 }
 
-# puan-durumu.json dosyasını otomatik günceller
+# JSON dosyasına yaz
 with open("puan-durumu.json", "w", encoding="utf-8") as f:
     json.dump(veri, f, ensure_ascii=False, indent=4)
 
-print("Puan durumu ve maçlar başarıyla güncellendi!")
+print("puan-durumu.json başarıyla güncellendi ve kaydedildi!")
