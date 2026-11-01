@@ -1,0 +1,22 @@
+{
+  "takim": "Şanlıurfaspor",
+  "lig": "2. Lig",
+  "puan_durumu": {
+    "sira": 3,
+    "oynancak_mac": 12,
+    "galibiyet": 7,
+    "beraberlik": 3,
+    "maglubiyet": 2,
+    "avans": "+10",
+    "puan": 24
+  },
+  "son_maclar": [
+    {
+      "hafta": "12. Hafta",
+      "rakip": "Karaköprü Belediyespor",
+      "skor": "2 - 1",
+      "durum": "MS",
+      "ev_sahibi_mi": true
+    }
+  ]
+}
