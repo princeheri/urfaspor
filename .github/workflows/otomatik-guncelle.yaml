@@ -3,7 +3,7 @@ name: Urfaspor Otomatik Veri Guncelleme
 on:
   schedule:
     - cron: '0 */3 * * *' # Her 3 saatte bir otomatik çalışır
-  workflow_dispatch: # İstersen GitHub'dan el ile de tetikleyebilirsin
+  workflow_dispatch: # GitHub panelinden istediğin an "Run workflow" diyerek elle tetikleyebilirsin
 
 jobs:
   build:
@@ -20,11 +20,11 @@ jobs:
       - name: Guncelleme Betigini Calistir
         run: python guncelle.py
 
-      - name: Degisiklikleri Otomatik Kaydet (Commit)
+      - name: Degisiklikleri Otomatik Kaydet
         run: |
           git config --global user.name "Urfaspor Bot"
           git config --global user.email "bot@urfaspor.api"
           git add puan-durumu.json
-          git commit -m "Otomatik skor ve puan durumu guncellendi [skip ci]" || exit 0
+          git commit -m "Otomatik veri guncellendi [skip ci]" || exit 0
           git push
           
