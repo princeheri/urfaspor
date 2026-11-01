@@ -2,8 +2,12 @@ name: Urfaspor Otomatik Veri Guncelleme
 
 on:
   schedule:
-    - cron: '0 */3 * * *' # Her 3 saatte bir otomatik çalışır
-  workflow_dispatch: # GitHub panelinden istediğin an "Run workflow" diyerek elle tetikleyebilirsin
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+# Botun depoya yazabilmesi için gerekli izin bloğu
+permissions:
+  contents: write
 
 jobs:
   build:
